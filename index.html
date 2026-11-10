@@ -1,0 +1,5107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habiba Haroon | Creative Digital Marketer &amp; Growth Strategist</title>
+  <meta name="description" content="Official portfolio of Habiba Haroon, Creative Digital Marketer specializing in high-ROAS paid ads, SEO, organic social media growth, and full-funnel content marketing.">
+  <meta name="keywords" content="Habiba Haroon, Digital Marketer, Social Media Marketing, SEO, Paid Ads, Meta Ads, Google Ads, Content Strategy, Growth Marketing">
+  <meta name="author" content="Habiba Haroon">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Habiba Haroon — Creative Digital Marketer">
+  <meta property="og:description" content="Helping brands grow digitally through creative storytelling, data-backed ad campaigns, and scalable marketing funnels.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <style>
+/* ==========================================================================
+   HABIBA HAROON — PREMIUM DIGITAL MARKETING PORTFOLIO
+   Design System & Master Stylesheet
+   Pure CSS3 (Zero Frameworks, Modern Standard)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties / Variables (Theme System)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Color Palette */
+  --primary-purple: #8B5CF6;       /* Electric Purple */
+  --primary-purple-rgb: 139, 92, 246;
+  --primary-purple-dark: #6D28D9;
+  --primary-purple-light: #A78BFA;
+
+  --royal-blue: #2563EB;           /* Royal Blue */
+  --royal-blue-rgb: 37, 99, 235;
+  --royal-blue-dark: #1D4ED8;
+  --royal-blue-light: #60A5FA;
+
+  --soft-violet: #C084FC;          /* Soft Violet */
+  --soft-violet-rgb: 192, 132, 252;
+  --accent-cyan: #06B6D4;
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
+  --grad-primary-hover: linear-gradient(135deg, #7C3AED 0%, #1D4ED8 100%);
+  --grad-accent: linear-gradient(135deg, #C084FC 0%, #8B5CF6 50%, #3B82F6 100%);
+  --grad-dark-card: linear-gradient(145deg, rgba(26, 32, 60, 0.7) 0%, rgba(13, 17, 36, 0.85) 100%);
+  --grad-glow: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.22) 0%, rgba(37, 99, 235, 0.12) 45%, transparent 70%);
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout & Spacing */
+  --max-width: 1240px;
+  --max-width-narrow: 920px;
+  --nav-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Elevation & Shadows */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px -10px rgba(139, 92, 246, 0.45);
+  --shadow-glow-blue: 0 0 40px -10px rgba(37, 99, 235, 0.45);
+
+  /* Dark Theme (Default) */
+  --bg-body: #070913;
+  --bg-surface: #0E1224;
+  --bg-surface-elevated: #151B34;
+  --bg-card: rgba(18, 24, 48, 0.72);
+  --bg-card-hover: rgba(26, 35, 68, 0.85);
+  --bg-glass: rgba(14, 18, 36, 0.65);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(139, 92, 246, 0.2);
+  --border-card-hover: rgba(139, 92, 246, 0.45);
+
+  --text-main: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverted: #070913;
+
+  --badge-bg: rgba(139, 92, 246, 0.14);
+  --badge-text: #C084FC;
+  --badge-border: rgba(139, 92, 246, 0.3);
+
+  --input-bg: rgba(14, 18, 36, 0.7);
+  --input-border: rgba(255, 255, 255, 0.12);
+  --input-focus-border: #8B5CF6;
+}
+
+/* --------------------------------------------------------------------------
+   Light Theme Override
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  --bg-body: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-card: rgba(139, 92, 246, 0.16);
+  --border-card-hover: rgba(139, 92, 246, 0.35);
+
+  --text-main: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-inverted: #FFFFFF;
+
+  --badge-bg: rgba(124, 58, 237, 0.08);
+  --badge-text: #6D28D9;
+  --badge-border: rgba(124, 58, 237, 0.22);
+
+  --shadow-subtle: 0 4px 20px rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
+  --shadow-glow: 0 0 35px -5px rgba(139, 92, 246, 0.25);
+  --shadow-glow-blue: 0 0 35px -5px rgba(37, 99, 235, 0.25);
+
+  --input-bg: #FFFFFF;
+  --input-border: rgba(15, 23, 42, 0.15);
+  --input-focus-border: #7C3AED;
+
+  --grad-glow: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 70%);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base Styles
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 20px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  position: relative;
+}
+
+/* Ambient Glowing Background Orbs */
+.ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.55;
+  animation: orbFloat 22s ease-in-out infinite alternate;
+}
+
+.ambient-orb-1 {
+  top: -10%;
+  left: -5%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.28) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
+.ambient-orb-2 {
+  top: 40%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, rgba(37, 99, 235, 0) 70%);
+  animation-delay: -7s;
+}
+
+.ambient-orb-3 {
+  bottom: -15%;
+  left: 20%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(192, 132, 252, 0.18) 0%, rgba(192, 132, 252, 0) 70%);
+  animation-delay: -14s;
+}
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.08); }
+  100% { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.container-narrow {
+  max-width: var(--max-width-narrow);
+}
+
+/* Section Shell */
+.section {
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-alt {
+  background-color: var(--bg-surface);
+  position: relative;
+}
+
+.section-alt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-card), transparent);
+}
+
+.section-alt::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-card), transparent);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--badge-text);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.section-eyebrow-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  box-shadow: 0 0 10px var(--primary-purple);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, var(--text-main) 60%, var(--soft-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Gradient Text Highlight */
+.gradient-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-alt {
+  background: linear-gradient(135deg, var(--soft-violet) 0%, var(--royal-blue-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-5px);
+}
+
+/* Glowing Border Accent (top highlight line) */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-purple), var(--royal-blue), transparent);
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--grad-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-primary:hover {
+  background: var(--grad-primary-hover);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+  border: 1px solid var(--border-card);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary-purple);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--text-main);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-outline:hover {
+  border-color: var(--royal-blue);
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--royal-blue-light);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.btn-icon svg {
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navigation Bar
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--border-subtle);
+  box-shadow: var(--shadow-subtle);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Brand Logo "HH" */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: var(--font-heading);
+  text-decoration: none;
+}
+
+.logo-monogram {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.05em;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brand-logo:hover .logo-monogram {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.6);
+}
+
+.logo-monogram::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 14px;
+  background: var(--grad-accent);
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(4px);
+}
+
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.logo-subtitle {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-purple);
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--grad-primary);
+  border-radius: 2px;
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Nav Action Items (Theme Toggle & CTA) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.theme-toggle-btn:hover {
+  background: var(--badge-bg);
+  border-color: var(--primary-purple);
+  transform: rotate(20deg);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-icon-light {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-dark {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-light {
+  display: block;
+}
+
+.btn-nav-cta {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card);
+  background: var(--bg-surface-elevated);
+  gap: 5px;
+  z-index: 1010;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.mobile-nav-toggle.open .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-nav-toggle.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-toggle.open .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + 3rem);
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-greeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--soft-violet);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+}
+
+.hero-name {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title-badge {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--royal-blue-light);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-title-badge::before {
+  content: '';
+  width: 28px;
+  height: 3px;
+  background: var(--grad-primary);
+  border-radius: 2px;
+}
+
+/* Dynamic Animated Text */
+.hero-animated-wrap {
+  min-height: 40px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.typing-prefix {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dynamic-typewriter {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  border-right: 2px solid var(--primary-purple);
+  padding-right: 4px;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--primary-purple); }
+}
+
+.hero-intro {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Social Media Bar */
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.social-links-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social-icon-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.social-icon-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icon-link:hover {
+  background: var(--badge-bg);
+  border-color: var(--primary-purple);
+  color: var(--primary-purple-light);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+}
+
+/* Hero Visual / Profile Image Card */
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-glow);
+  z-index: 2;
+  transition: transform var(--transition-normal);
+}
+
+.hero-image-card:hover {
+  transform: translateY(-6px);
+}
+
+.hero-image-inner {
+  border-radius: calc(var(--radius-xl) - 8px);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, rgba(30, 27, 75, 0.5) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.hero-image-card:hover .hero-profile-img {
+  transform: scale(1.03);
+}
+
+/* Floating Decorative Stat Badges in Hero */
+.floating-stat-badge {
+  position: absolute;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  z-index: 3;
+  animation: floatUpDown 6s ease-in-out infinite alternate;
+}
+
+.badge-top-left {
+  top: 8%;
+  left: -8%;
+  animation-delay: 0s;
+}
+
+.badge-bottom-right {
+  bottom: 8%;
+  right: -8%;
+  animation-delay: -3s;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-14px); }
+}
+
+.floating-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--badge-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+}
+
+.floating-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.floating-stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.floating-stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   5. Key Metrics Counter Strip
+   -------------------------------------------------------------------------- */
+.metrics-strip {
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.metric-card {
+  padding: 1.8rem 1.5rem;
+  text-align: center;
+}
+
+.metric-value-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.metric-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.metric-suffix {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   6. About Me Section
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-card-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.about-img-frame {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.about-img-frame img {
+  border-radius: var(--radius-lg);
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-intro-box {
+  background: var(--badge-bg);
+  border-left: 4px solid var(--primary-purple);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.about-intro-box p {
+  color: var(--text-main);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.about-body-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Career Goals Glass Box */
+.career-goals-box {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-card);
+}
+
+.career-goals-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--soft-violet);
+}
+
+.career-goals-title svg {
+  width: 22px;
+  height: 22px;
+}
+
+.career-goals-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Professional Interests Grid */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.interest-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.interest-pill:hover {
+  border-color: var(--primary-purple);
+  background: var(--badge-bg);
+  transform: translateX(4px);
+}
+
+.interest-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.interest-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.interest-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.about-action-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Skills Section
+   -------------------------------------------------------------------------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.skill-category-card {
+  padding: 2.25rem 2rem;
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.skill-cat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.35);
+  flex-shrink: 0;
+}
+
+.skill-cat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.skill-cat-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.skill-cat-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.skill-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.skill-percentage {
+  color: var(--primary-purple-light);
+  font-family: var(--font-heading);
+}
+
+.skill-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-surface-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-subtle);
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--grad-primary);
+  position: relative;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+/* Tools & Software Badges Shelf */
+.tools-showcase {
+  text-align: center;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-card);
+}
+
+.tools-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.tools-tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.tool-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.tool-tag:hover {
+  border-color: var(--primary-purple);
+  background: var(--badge-bg);
+  color: var(--soft-violet);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.tool-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+}
+
+/* --------------------------------------------------------------------------
+   8. Services Section
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.service-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--grad-primary);
+  color: #FFFFFF;
+  border-color: transparent;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.45);
+}
+
+.service-icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.service-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text-main);
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.service-deliverables {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.service-item-check {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.service-item-check svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary-purple-light);
+  transition: gap var(--transition-fast);
+}
+
+.service-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.service-link:hover {
+  color: var(--royal-blue-light);
+  gap: 0.75rem;
+}
+
+.service-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   9. Portfolio / Case Studies Section
+   -------------------------------------------------------------------------- */
+.portfolio-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text-main);
+  border-color: var(--border-card);
+  background: var(--bg-surface-elevated);
+}
+
+.filter-btn.active {
+  background: var(--grad-primary);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(139, 92, 246, 0.4);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.portfolio-card.hidden {
+  display: none;
+}
+
+.portfolio-visual {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.portfolio-mock-graphic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: transform var(--transition-slow);
+}
+
+.portfolio-card:hover .portfolio-mock-graphic {
+  transform: scale(1.08);
+}
+
+.portfolio-badge-pill {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(14, 18, 36, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--soft-violet);
+}
+
+.portfolio-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.portfolio-client {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-purple-light);
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.portfolio-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.portfolio-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 0;
+  margin-bottom: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stat-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-emerald);
+}
+
+.stat-metric-key {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.portfolio-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-case-study {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.btn-case-study:hover {
+  color: var(--primary-purple-light);
+  gap: 0.65rem;
+}
+
+.btn-case-study svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Experience & Certifications
+   -------------------------------------------------------------------------- */
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-purple) 0%, var(--royal-blue) 70%, transparent 100%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 6px;
+  left: -2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  border: 3px solid var(--bg-body);
+  box-shadow: 0 0 10px var(--primary-purple);
+  transition: transform var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.35);
+  background: var(--royal-blue);
+  box-shadow: 0 0 14px var(--royal-blue);
+}
+
+.timeline-card {
+  padding: 1.75rem;
+}
+
+.timeline-period {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-purple-light);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.85rem;
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Certifications Panel */
+.certifications-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cert-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cert-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+.cert-badge-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--soft-violet);
+  margin-bottom: 0.25rem;
+}
+
+.cert-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   11. Testimonials Section
+   -------------------------------------------------------------------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.test-stars {
+  display: flex;
+  gap: 4px;
+  color: var(--accent-amber);
+  margin-bottom: 1.25rem;
+}
+
+.test-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.test-quote {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.test-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--grad-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.test-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-author-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.test-author-role {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   12. FAQ Section (Accordion)
+   -------------------------------------------------------------------------- */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-item {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item.active {
+  border-color: var(--primary-purple);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+}
+
+.faq-question-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.35rem 1.75rem;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.faq-question-btn:hover {
+  color: var(--primary-purple-light);
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  flex-shrink: 0;
+  transition: transform var(--transition-normal), background var(--transition-normal);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  background: var(--primary-purple);
+  color: #FFFFFF;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal), padding var(--transition-normal);
+  padding: 0 1.75rem;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 250px;
+  padding-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Contact Section
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+}
+
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-detail-card {
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contact-detail-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  flex-shrink: 0;
+}
+
+.contact-detail-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-detail-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.contact-detail-val {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.contact-status-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.status-dot-pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 12px var(--accent-emerald);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.status-dot-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-emerald);
+  animation: pulsePing 2s infinite;
+}
+
+@keyframes pulsePing {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.status-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+}
+
+/* Contact Form */
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+.form-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.form-field label .required-star {
+  color: var(--primary-purple);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.15rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.form-select option {
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.35);
+  background: var(--bg-surface);
+}
+
+.form-input.input-error,
+.form-textarea.input-error {
+  border-color: #EF4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+.field-error-msg {
+  font-size: 0.78rem;
+  color: #EF4444;
+  display: none;
+}
+
+.field-error-msg.visible {
+  display: block;
+}
+
+.btn-submit-form {
+  width: 100%;
+  padding: 1.05rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   14. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand-bio {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  max-width: 320px;
+}
+
+.footer-col-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--primary-purple);
+  border-radius: 2px;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links-list a {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--primary-purple-light);
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-copy {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.footer-copy span {
+  color: var(--primary-purple-light);
+  font-weight: 600;
+}
+
+/* Back to Top Button */
+.back-to-top-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-card);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.back-to-top-btn:hover {
+  background: var(--grad-primary);
+  color: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   15. Modals & Interactive Overlays
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 9, 19, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 680px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.92) translateY(20px);
+  transition: transform var(--transition-normal);
+  padding: 2.5rem;
+}
+
+.modal-overlay.open .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: #FFFFFF;
+  background: #EF4444;
+  border-color: #EF4444;
+  transform: rotate(90deg);
+}
+
+/* CV Modal Content */
+.cv-preview-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cv-header-block {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cv-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.cv-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-purple-light);
+  margin-bottom: 0.5rem;
+}
+
+.cv-contact-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cv-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--soft-violet);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cv-summary-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.cv-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast {
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--accent-emerald);
+  color: var(--text-main);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  pointer-events: auto;
+  transform: translateX(120%);
+  transition: transform var(--transition-normal);
+}
+
+.toast.show {
+  transform: translateX(0);
+}
+
+.toast-icon {
+  color: var(--accent-emerald);
+}
+
+.toast-text {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   16. Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3.5rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title-badge {
+    justify-content: center;
+  }
+
+  .hero-animated-wrap {
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-visual {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  /* Mobile Navigation Drawer */
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: var(--bg-surface);
+    border-left: 1px solid var(--border-card);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: calc(var(--nav-height) + 1.5rem) 2rem 2rem;
+    gap: 1.5rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    z-index: 1005;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+  }
+
+  .btn-nav-cta {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-top-left {
+    top: -5%;
+    left: 0;
+  }
+
+  .badge-bottom-right {
+    bottom: -5%;
+    right: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .form-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .modal-dialog {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Ambient Glowing Aura Orbs -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- HH Logo -->
+      <a href="#home" class="brand-logo" aria-label="Habiba Haroon Home">
+        <div class="logo-monogram">HH</div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">HABIBA HAROON</span>
+          <span class="logo-subtitle">DIGITAL MARKETER</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & CTA) -->
+      <div class="nav-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle light or dark theme" title="Toggle Theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Direct CTA -->
+        <a href="#contact" class="btn btn-primary btn-nav-cta">
+          <span>Let's Talk</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text & Brand Narrative -->
+        <div class="hero-content">
+          <div class="hero-greeting">
+            <span class="section-eyebrow-icon"></span>
+            <span>HELLO, I'M</span>
+          </div>
+
+          <h1 class="hero-name">
+            HABIBA <span class="gradient-text">HAROON</span>
+          </h1>
+
+          <div class="hero-title-badge">
+            Creative Digital Marketer
+          </div>
+
+          <!-- Dynamic Typing Headline -->
+          <div class="hero-animated-wrap" aria-live="polite">
+            <span class="typing-prefix">Passionate about</span>
+            <span class="dynamic-typewriter" id="dynamicTypewriter">Helping Brands Grow Digitally</span>
+          </div>
+
+          <!-- Exact Introduction from brief -->
+          <p class="hero-intro">
+            I am a passionate Digital Marketer who loves creativity, technology, and helping businesses grow through effective digital strategies. I focus on building strong online identities, creating engaging content, and developing marketing strategies that deliver meaningful results.
+          </p>
+
+          <!-- Dual Hero CTAs -->
+          <div class="hero-cta-group">
+            <a href="#portfolio" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Social Media Icons Bar -->
+          <div class="hero-socials">
+            <span class="social-label">Connect:</span>
+            <div class="social-links-list">
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Habiba Haroon LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <!-- Twitter / X -->
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Habiba Haroon X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Habiba Haroon Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- Behance / Dribbble / Portfolio -->
+              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Habiba Haroon Behance Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"></path>
+                  <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"></path>
+                  <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"></path>
+                </svg>
+              </a>
+              <!-- Email Direct -->
+              <a href="mailto:habiba.haroon.marketing@example.com" class="social-icon-link" aria-label="Email Habiba Haroon Directly">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Profile Card with Floating Stats -->
+        <div class="hero-visual">
+          <!-- Floating Badge Top Left: ROAS Growth -->
+          <div class="floating-stat-badge badge-top-left">
+            <div class="floating-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-stat-num">4.5x</div>
+              <div class="floating-stat-label">Average Ad ROAS</div>
+            </div>
+          </div>
+
+          <!-- Main Portrait Glass Frame -->
+          <div class="hero-image-card">
+            <div class="hero-image-inner">
+              <svg class="hero-profile-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE7D6" />
+      <stop offset="100%" stop-color="#F3CBB3" />
+    </linearGradient>
+
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E2E" />
+      <stop offset="70%" stop-color="#11111B" />
+      <stop offset="100%" stop-color="#09090D" />
+    </linearGradient>
+
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9" />
+      <stop offset="50%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+
+    <linearGradient id="innerShirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <linearGradient id="earringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#8B5CF6" flood-opacity="0.35" />
+    </filter>
+
+    <filter id="glowEffect" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glowing Aura -->
+  <circle cx="300" cy="300" r="260" fill="url(#bgGlow)" filter="url(#glowEffect)" opacity="0.35" />
+
+  <!-- Outer Decorative Tech Orbit Ring -->
+  <circle cx="300" cy="300" r="240" fill="none" stroke="url(#bgGlow)" stroke-width="2.5" stroke-dasharray="12 8" opacity="0.7" />
+  
+  <!-- Main Backdrop Disc -->
+  <circle cx="300" cy="300" r="225" fill="url(#circleGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="3" filter="url(#softShadow)" />
+
+  <!-- Decorative Orbit Nodes -->
+  <circle cx="120" cy="190" r="6" fill="#A855F7" />
+  <circle cx="480" cy="210" r="8" fill="#3B82F6" />
+  <circle cx="430" cy="440" r="5" fill="#C084FC" />
+  <circle cx="160" cy="420" r="7" fill="#60A5FA" />
+
+  <g id="avatar">
+    <!-- Hair back -->
+    <path d="M 210,210 Q 170,300 190,440 L 410,440 Q 430,300 390,210 Z" fill="url(#hairGrad)" />
+
+    <!-- Neck -->
+    <rect x="270" y="320" width="60" height="70" rx="10" fill="url(#skinGrad)" />
+    <path d="M 270,350 Q 300,370 330,350 L 330,370 L 270,370 Z" fill="#E6BAA3" opacity="0.4" />
+
+    <!-- Shoulders & Blazer -->
+    <path d="M 175,490 Q 210,380 270,375 L 330,375 Q 390,380 425,490 Q 300,530 175,490 Z" fill="url(#suitGrad)" />
+    
+    <!-- White Top / Inner Shirt -->
+    <path d="M 270,375 L 300,430 L 330,375 Z" fill="url(#innerShirt)" />
+
+    <!-- Lapels -->
+    <path d="M 245,390 L 290,455 L 275,470 L 225,410 Z" fill="#581C87" opacity="0.6" />
+    <path d="M 355,390 L 310,455 L 325,470 L 375,410 Z" fill="#581C87" opacity="0.6" />
+
+    <!-- Face -->
+    <ellipse cx="300" cy="275" rx="68" ry="85" fill="url(#skinGrad)" />
+    
+    <!-- Ears -->
+    <ellipse cx="230" cy="280" rx="10" ry="16" fill="url(#skinGrad)" />
+    <ellipse cx="370" cy="280" rx="10" ry="16" fill="url(#skinGrad)" />
+
+    <!-- Gold Hoop Earrings -->
+    <circle cx="230" cy="295" r="9" fill="none" stroke="url(#earringGrad)" stroke-width="3" />
+    <circle cx="370" cy="295" r="9" fill="none" stroke="url(#earringGrad)" stroke-width="3" />
+
+    <!-- Hair front / Styling -->
+    <path d="M 230,250 C 230,170 370,170 370,250 C 370,220 340,195 300,195 C 260,195 230,220 230,250 Z" fill="url(#hairGrad)" />
+    <path d="M 230,250 Q 250,210 300,210 Q 360,210 370,250 C 350,230 330,225 300,225 C 270,225 250,230 230,250 Z" fill="#2E2B44" />
+    <!-- Sleek side locks -->
+    <path d="M 232,240 C 220,290 225,360 235,390 C 242,390 248,340 240,280 Z" fill="url(#hairGrad)" />
+    <path d="M 368,240 C 380,290 375,360 365,390 C 358,390 352,340 360,280 Z" fill="url(#hairGrad)" />
+
+    <!-- Eyebrows -->
+    <path d="M 255,248 Q 272,243 285,248" stroke="#1F1D2B" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <path d="M 315,248 Q 328,243 345,248" stroke="#1F1D2B" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes (Confident, Friendly, Elegant) -->
+    <!-- Left Eye -->
+    <ellipse cx="270" cy="265" rx="10" ry="6" fill="#FFFFFF" />
+    <circle cx="271" cy="265" r="4.5" fill="#311B92" />
+    <circle cx="272.5" cy="263.5" r="1.8" fill="#FFFFFF" />
+    <path d="M 258,263 Q 270,258 282,263" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Right Eye -->
+    <ellipse cx="330" cy="265" rx="10" ry="6" fill="#FFFFFF" />
+    <circle cx="329" cy="265" r="4.5" fill="#311B92" />
+    <circle cx="330.5" cy="263.5" r="1.8" fill="#FFFFFF" />
+    <path d="M 318,263 Q 330,258 342,263" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyelashes subtle touch -->
+    <path d="M 280,260 L 284,258" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 340,260 L 344,258" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round" />
+
+    <!-- Elegant Modern Glasses (Designer Purple-Gold Rim) -->
+    <rect x="252" y="250" width="36" height="28" rx="8" fill="rgba(139,92,246,0.08)" stroke="#A855F7" stroke-width="2.2" />
+    <rect x="312" y="250" width="36" height="28" rx="8" fill="rgba(139,92,246,0.08)" stroke="#A855F7" stroke-width="2.2" />
+    <!-- Glasses Bridge -->
+    <path d="M 288,260 Q 300,256 312,260" stroke="#F59E0B" stroke-width="2.5" fill="none" />
+    <!-- Glasses Temples -->
+    <path d="M 252,258 L 232,254" stroke="#F59E0B" stroke-width="2" />
+    <path d="M 348,258 L 368,254" stroke="#F59E0B" stroke-width="2" />
+
+    <!-- Nose -->
+    <path d="M 298,272 Q 302,286 296,290 Q 300,292 305,290" stroke="#DC9E82" stroke-width="2.2" stroke-linecap="round" fill="none" />
+
+    <!-- Soft Cheek Blush -->
+    <ellipse cx="255" cy="292" rx="12" ry="7" fill="#F472B6" opacity="0.3" />
+    <ellipse cx="345" cy="292" rx="12" ry="7" fill="#F472B6" opacity="0.3" />
+
+    <!-- Warm Confident Smile -->
+    <path d="M 284,312 Q 300,326 316,312" stroke="#BE185D" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 287,313 Q 300,322 313,313 Z" fill="#F43F5E" opacity="0.75" />
+
+    <!-- Digital Marketer Sparkle Pin on Lapel -->
+    <polygon points="238,430 241,438 249,441 241,444 238,452 235,444 227,441 235,438" fill="#FDE047" filter="url(#glowEffect)" />
+  </g>
+
+  <!-- Floating Digital Marketing Badges Overlaid -->
+  <!-- Floating Metric Chip Left: ROAS -->
+  <g transform="translate(60, 360)">
+    <rect width="130" height="48" rx="12" fill="#0F172A" fill-opacity="0.9" stroke="#8B5CF6" stroke-width="1.5" />
+    <circle cx="26" cy="24" r="14" fill="#8B5CF6" fill-opacity="0.2" />
+    <path d="M 20,27 L 24,20 L 28,24 L 32,18" stroke="#A855F7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="48" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">AVERAGE ROAS</text>
+    <text x="48" y="37" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="800">4.5x Growth</text>
+  </g>
+
+  <!-- Floating Metric Chip Right: Verified Badge -->
+  <g transform="translate(420, 160)">
+    <rect width="135" height="48" rx="12" fill="#0F172A" fill-opacity="0.9" stroke="#3B82F6" stroke-width="1.5" />
+    <circle cx="26" cy="24" r="14" fill="#3B82F6" fill-opacity="0.2" />
+    <path d="M 21,24 L 25,28 L 32,20" stroke="#60A5FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="48" y="20" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">STRATEGY</text>
+    <text x="48" y="37" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="14" font-weight="800">Meta &amp; Google</text>
+  </g>
+</svg>
+
+            </div>
+          </div>
+
+          <!-- Floating Badge Bottom Right: Reach -->
+          <div class="floating-stat-badge badge-bottom-right">
+            <div class="floating-icon" style="color: var(--royal-blue-light); background: rgba(37,99,235,0.15);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-stat-num">2.5M+</div>
+              <div class="floating-stat-label">Audience Reached</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counter Strip -->
+      <div class="metrics-strip">
+        <div class="metrics-grid">
+          <div class="metric-card glass-card">
+            <div class="metric-value-wrap">
+              <span class="metric-number" data-target="5">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <div class="metric-label">Years of Experience</div>
+          </div>
+
+          <div class="metric-card glass-card">
+            <div class="metric-value-wrap">
+              <span class="metric-number" data-target="120">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <div class="metric-label">Growth Campaigns Run</div>
+          </div>
+
+          <div class="metric-card glass-card">
+            <div class="metric-value-wrap">
+              <span class="metric-number" data-target="4.5">0</span>
+              <span class="metric-suffix">M+</span>
+            </div>
+            <div class="metric-label">Ad Spend Managed ($)</div>
+          </div>
+
+          <div class="metric-card glass-card">
+            <div class="metric-value-wrap">
+              <span class="metric-number" data-target="98">0</span>
+              <span class="metric-suffix">%</span>
+            </div>
+            <div class="metric-label">Client Retention Rate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT ME SECTION
+       ========================================================================== -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header text-left">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>GET TO KNOW ME</span>
+        </div>
+        <h2 class="section-title">
+          Driving Scalable Growth Through <span class="gradient-text">Creative &amp; Data-Driven Marketing</span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Visual Column: Analytics & Growth Dashboard Graphic -->
+        <div class="about-visual">
+          <div class="about-card-wrapper glass-card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="chartLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="chartAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background decorative glowing circle -->
+  <circle cx="270" cy="230" r="180" fill="url(#mGlow)" filter="blur(30px)" />
+
+  <!-- Base Dashboard Canvas Window -->
+  <rect x="40" y="40" width="460" height="360" rx="20" fill="url(#cardGrad)" stroke="rgba(139,92,246,0.3)" stroke-width="1.5" />
+  
+  <!-- Window Header -->
+  <circle cx="70" cy="68" r="5" fill="#EF4444" />
+  <circle cx="88" cy="68" r="5" fill="#F59E0B" />
+  <circle cx="106" cy="68" r="5" fill="#10B981" />
+  <rect x="140" y="60" width="180" height="16" rx="8" fill="rgba(255,255,255,0.08)" />
+  <rect x="420" y="60" width="50" height="16" rx="8" fill="#8B5CF6" fill-opacity="0.3" />
+
+  <!-- Main Chart Area -->
+  <g transform="translate(65, 110)">
+    <!-- Grid Lines -->
+    <line x1="0" y1="40" x2="410" y2="40" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+    <line x1="0" y1="90" x2="410" y2="90" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+    <line x1="0" y1="140" x2="410" y2="140" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" />
+    <line x1="0" y1="190" x2="410" y2="190" stroke="rgba(255,255,255,0.12)" />
+
+    <!-- Chart Fill Area -->
+    <path d="M 10,170 C 60,150 100,165 140,110 C 180,60 220,120 280,70 C 330,30 360,45 400,15 L 400,190 L 10,190 Z" fill="url(#chartAreaGrad)" />
+
+    <!-- Main Trend Line -->
+    <path d="M 10,170 C 60,150 100,165 140,110 C 180,60 220,120 280,70 C 330,30 360,45 400,15" fill="none" stroke="url(#chartLineGrad)" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Chart Data Points -->
+    <circle cx="140" cy="110" r="5" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="3" />
+    <circle cx="280" cy="70" r="5" fill="#FFFFFF" stroke="#A855F7" stroke-width="3" />
+    <circle cx="400" cy="15" r="6" fill="#38BDF8" stroke="#FFFFFF" stroke-width="3" />
+
+    <!-- Tooltip at Peak -->
+    <g transform="translate(320, -25)">
+      <rect width="90" height="34" rx="8" fill="#1E1B4B" stroke="#38BDF8" stroke-width="1.2" />
+      <text x="45" y="16" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle" font-weight="600">ROI SURGE</text>
+      <text x="45" y="28" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" font-weight="800">+380%</text>
+    </g>
+  </g>
+
+  <!-- Floating Stats Card 1: Social Conversions -->
+  <g transform="translate(20, 290)">
+    <rect width="180" height="90" rx="16" fill="#0B0F19" fill-opacity="0.95" stroke="#8B5CF6" stroke-width="1.5" />
+    <text x="20" y="32" fill="#A855F7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">CONVERSIONS</text>
+    <text x="20" y="62" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="800">142.8K</text>
+    <path d="M 120,55 L 132,40 L 144,48 L 158,32" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="120" y="72" fill="#10B981" font-family="system-ui, sans-serif" font-size="11" font-weight="600">+48.2%</text>
+  </g>
+
+  <!-- Floating Stats Card 2: Marketing Channels -->
+  <g transform="translate(340, 260)">
+    <rect width="170" height="115" rx="16" fill="#0B0F19" fill-opacity="0.95" stroke="#3B82F6" stroke-width="1.5" />
+    <text x="18" y="28" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">TRAFFIC MIX</text>
+    
+    <!-- Mini progress bars -->
+    <text x="18" y="50" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Meta Ads</text>
+    <rect x="75" y="44" width="75" height="6" rx="3" fill="#1E293B" />
+    <rect x="75" y="44" width="55" height="6" rx="3" fill="#8B5CF6" />
+
+    <text x="18" y="72" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Organic SEO</text>
+    <rect x="75" y="66" width="75" height="6" rx="3" fill="#1E293B" />
+    <rect x="75" y="66" width="60" height="6" rx="3" fill="#3B82F6" />
+
+    <text x="18" y="94" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="10">Inbound</text>
+    <rect x="75" y="88" width="75" height="6" rx="3" fill="#1E293B" />
+    <rect x="75" y="88" width="45" height="6" rx="3" fill="#C084FC" />
+  </g>
+</svg>
+
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="about-content">
+          <!-- Exact text block requested in brief -->
+          <div class="about-intro-box">
+            <p>
+              Hi, I'm Habiba Haroon, a passionate and creative Digital Marketer. I am interested in digital technologies, online business growth, social media marketing, and creative content strategies.
+            </p>
+          </div>
+
+          <p class="about-body-text">
+            My goal is to help businesses develop a powerful online presence, reach their target audiences, and grow through effective digital marketing techniques.
+          </p>
+
+          <p class="about-body-text">
+            I believe in continuous learning, creativity, and professional development. Every business has a distinct voice; my mission is to amplify that voice across digital channels with compelling messaging, precise audience segmentation, and performance-driven campaign execution.
+          </p>
+
+          <!-- Career Goals Card -->
+          <div class="career-goals-box">
+            <div class="career-goals-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 6 12 12 16 14"></polygon>
+              </svg>
+              <span>My Career Vision &amp; Philosophy</span>
+            </div>
+            <p class="career-goals-text">
+              To empower modern brands and visionary founders with full-funnel digital marketing systems that turn organic attention and targeted ad spend into sustainable, compounding revenue.
+            </p>
+          </div>
+
+          <!-- Professional Interests Grid -->
+          <div class="interests-grid">
+            <div class="interest-pill">
+              <div class="interest-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <span class="interest-name">Data-Driven Growth</span>
+            </div>
+
+            <div class="interest-pill">
+              <div class="interest-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <span class="interest-name">Social Media Strategy</span>
+            </div>
+
+            <div class="interest-pill">
+              <div class="interest-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="interest-name">Creative Content Creation</span>
+            </div>
+
+            <div class="interest-pill">
+              <div class="interest-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <span class="interest-name">Conversion Optimization</span>
+            </div>
+          </div>
+
+          <!-- Actions: Download CV & Schedule Consultation -->
+          <div class="about-action-group">
+            <button class="btn btn-primary" data-trigger-cv="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV / Resume</span>
+            </button>
+
+            <a href="#contact" class="btn btn-secondary">
+              <span>Book Strategy Call</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>STRATEGIC TOOLKIT</span>
+        </div>
+        <h2 class="section-title">
+          Marketing Capabilities Built for <span class="gradient-text">Real Growth</span>
+        </h2>
+        <p class="section-subtitle">
+          A balanced blend of analytical rigor and creative strategy to drive acquisition, engagement, and customer retention.
+        </p>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid">
+        <!-- Skill Group 1: Social Media & Paid Advertising -->
+        <div class="skill-category-card glass-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">Social Media &amp; Paid Acquisition</h3>
+              <p class="skill-cat-desc">Meta Ads, TikTok Ads, LinkedIn Campaigns, Viral Community Growth</p>
+            </div>
+          </div>
+
+          <div class="skill-bars-list">
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Social Media Marketing &amp; Community Building</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Paid Ad Campaigns (Meta Ads Manager &amp; TikTok)</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Google Search &amp; Display PPC</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Group 2: SEO, Content & Funnels -->
+        <div class="skill-category-card glass-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="background: linear-gradient(135deg, var(--royal-blue) 0%, var(--accent-cyan) 100%);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <div>
+              <h3 class="skill-cat-title">SEO, Content Strategy &amp; Funnels</h3>
+              <p class="skill-cat-desc">Organic Rankings, Copywriting, Email Automation &amp; CRO</p>
+            </div>
+          </div>
+
+          <div class="skill-bars-list">
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Content Strategy &amp; High-Converting Copy</span>
+                <span class="skill-percentage">94%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 94%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Search Engine Optimization (SEO &amp; On-Page)</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Analytics &amp; Data Insights (GA4 &amp; Looker)</span>
+                <span class="skill-percentage">93%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" style="width: 93%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms Cloud -->
+      <div class="tools-showcase">
+        <h3 class="tools-title">Platforms &amp; MarTech Stack I Master</h3>
+        <div class="tools-tags-cloud">
+          <span class="tool-tag"><span class="tool-dot"></span>Meta Business Suite</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Google Ads</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Google Analytics 4 (GA4)</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Semrush &amp; Ahrefs</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Klaviyo &amp; Mailchimp</span>
+          <span class="tool-tag"><span class="tool-dot"></span>HubSpot CRM</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Canva Pro &amp; Adobe Suite</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Figma Design</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Looker Studio</span>
+          <span class="tool-tag"><span class="tool-dot"></span>TikTok Ads Center</span>
+          <span class="tool-tag"><span class="tool-dot"></span>Zapier Automation</span>
+          <span class="tool-tag"><span class="tool-dot"></span>WordPress &amp; Shopify SEO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SERVICES SECTION
+       ========================================================================== -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>WHAT I OFFER</span>
+        </div>
+        <h2 class="section-title">
+          Specialized Services to <span class="gradient-text">Elevate Your Brand</span>
+        </h2>
+        <p class="section-subtitle">
+          Comprehensive growth frameworks engineered to scale organic reach, optimize ad dollars, and maximize client lifetime value.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Social Media Management -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Social Media Management</h3>
+            <p class="service-desc">
+              Comprehensive social media management from calendar planning and creative asset design to active community nurturing and algorithmic engagement.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Monthly Content Calendars &amp; Hooks</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Reels &amp; TikTok Video Strategies</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Audience Engagement &amp; DM Funnels</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 2: Paid Ads & PPC -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">High-Converting Paid Ads</h3>
+            <p class="service-desc">
+              Profit-first Meta &amp; Google Ads campaigns built with laser-focused targeting, continuous A/B split-testing, and rigorous ROAS tracking.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full-Funnel Campaign Architecture</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Creative Testing &amp; UGC Scripting</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dynamic Retargeting &amp; Lookalikes</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 3: SEO Optimization -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Search Engine Optimization</h3>
+            <p class="service-desc">
+              Long-term organic visibility on Google. Technical site audits, keyword clustering, and high-authority on-page search optimizations.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Technical SEO &amp; Core Web Vitals Fixes</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Commercial Keyword Mapping</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Authority Link Building Strategy</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 4: Content Strategy & Copywriting -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Content Marketing &amp; Copy</h3>
+            <p class="service-desc">
+              Words that persuade and convert. Persuasive ad copy, storytelling landing pages, video scripts, and brand voice guidelines.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>High-Converting Sales Page Copy</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Engaging Video &amp; Reel Storyboards</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Brand Voice Architecture</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 5: Email Marketing & CRM -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <h3 class="service-title">Email &amp; Funnel Automation</h3>
+            <p class="service-desc">
+              Transform one-time buyers into loyal brand advocates through automated email journeys, welcome flows, and abandoned cart recovery.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated Klaviyo &amp; Mailchimp Flows</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cart Recovery &amp; Win-Back Campaigns</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>List Segmentation &amp; VIP Clubs</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 6: Analytics & Performance Audits -->
+        <div class="service-card glass-card">
+          <div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Analytics &amp; CRO Audits</h3>
+            <p class="service-desc">
+              Custom Looker Studio dashboards, Google Tag Manager event tracking, user heatmaps, and funnel leakage diagnostic audits.
+            </p>
+            <div class="service-deliverables">
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Real-Time Executive KPI Dashboards</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>GA4 Server-Side Event Tracking</span>
+              </div>
+              <div class="service-item-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Conversion Rate Optimization (CRO)</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="service-link">
+            <span>Inquire About This Service</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTFOLIO & CASE STUDIES SECTION
+       ========================================================================== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>PROVEN RESULTS</span>
+        </div>
+        <h2 class="section-title">
+          Featured <span class="gradient-text">Case Studies &amp; Campaigns</span>
+        </h2>
+        <p class="section-subtitle">
+          Real numbers, verified performance metrics, and transformative digital marketing growth stories.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="portfolio-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="paid-ads">Paid Ads &amp; PPC</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="seo">SEO &amp; Inbound</button>
+        <button class="filter-btn" data-filter="email">Email &amp; Retention</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <!-- Project 1: Aura Glow -->
+        <div class="portfolio-card glass-card" data-category="paid-ads">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#1E1B4B" stroke="#8B5CF6" stroke-width="1.5" />
+                <path d="M 30,90 Q 70,80 100,50 T 170,25" fill="none" stroke="#A855F7" stroke-width="3" />
+                <circle cx="170" cy="25" r="5" fill="#38BDF8" />
+                <text x="30" y="40" fill="#F8FAFC" font-size="12" font-weight="700">AURA GLOW</text>
+                <text x="30" y="55" fill="#10B981" font-size="16" font-weight="800">+280% SALES</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">Meta Ads Scale</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">Aura Glow Skincare</span>
+            <h3 class="portfolio-title">Scaling D2C Beauty Brand Revenue to 4.2x ROAS</h3>
+            <p class="portfolio-desc">
+              Overhauled creative UGC pipelines and restructured Meta Advantage+ campaigns to scale monthly turnover sustainably.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">4.2x</span>
+                <span class="stat-metric-key">ROAS Achieved</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">+280%</span>
+                <span class="stat-metric-key">Quarterly Sales</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="aura-glow">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Finova Tech -->
+        <div class="portfolio-card glass-card" data-category="seo">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5" />
+                <line x1="30" y1="90" x2="170" y2="90" stroke="rgba(255,255,255,0.1)" />
+                <path d="M 30,85 C 60,80 90,60 120,40 C 150,20 160,15 170,12" fill="none" stroke="#60A5FA" stroke-width="3" />
+                <text x="30" y="38" fill="#F8FAFC" font-size="12" font-weight="700">FINOVA SAAS</text>
+                <text x="30" y="55" fill="#38BDF8" font-size="16" font-weight="800">+340% PIPELINE</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">B2B Inbound &amp; SEO</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">Finova Tech Solutions</span>
+            <h3 class="portfolio-title">Enterprise B2B Pipeline Growth &amp; LinkedIn Ads</h3>
+            <p class="portfolio-desc">
+              Constructed high-intent SEO topic clusters and targeted LinkedIn Thought Leader ads to accelerate enterprise sales.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">+340%</span>
+                <span class="stat-metric-key">Demo Requests</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">-42%</span>
+                <span class="stat-metric-key">Cost Per Lead</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="finova-tech">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: UrbanThread -->
+        <div class="portfolio-card glass-card" data-category="social">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#1A102F" stroke="#C084FC" stroke-width="1.5" />
+                <circle cx="100" cy="50" r="30" fill="none" stroke="#C084FC" stroke-width="2" stroke-dasharray="5 5" />
+                <text x="100" y="54" fill="#FFFFFF" font-size="11" text-anchor="middle" font-weight="800">2.8M VIEWS</text>
+                <text x="100" y="95" fill="#E2E8F0" font-size="10" text-anchor="middle">TIKTOK CAMPAIGN</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">Social Virality</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">UrbanThread Streetwear</span>
+            <h3 class="portfolio-title">Viral TikTok &amp; Instagram Drop for Streetwear Line</h3>
+            <p class="portfolio-desc">
+              Coordinated micro-creator styling transformations and broadcast channel early access to sell out the collection in 72 hours.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">2.8M+</span>
+                <span class="stat-metric-key">Organic Reach</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">+42K</span>
+                <span class="stat-metric-key">New Followers</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="urban-thread">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Apex Health -->
+        <div class="portfolio-card glass-card" data-category="seo">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#0B1B2B" stroke="#06B6D4" stroke-width="1.5" />
+                <rect x="35" y="30" width="130" height="24" rx="6" fill="#1E293B" />
+                <circle cx="48" cy="42" r="5" fill="#06B6D4" />
+                <text x="62" y="46" fill="#FFFFFF" font-size="9" font-weight="700">#1 GOOGLE RANK</text>
+                <text x="100" y="85" fill="#10B981" font-size="14" text-anchor="middle" font-weight="800">+210% BOOKINGS</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">Local SEO Dominance</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">Apex Health Clinics</span>
+            <h3 class="portfolio-title">Dominating Local Health Search for 6 Clinic Locations</h3>
+            <p class="portfolio-desc">
+              Comprehensive technical SEO audit, Google Business Profile optimization, and local review funnels to maximize appointments.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">45+</span>
+                <span class="stat-metric-key">#1 Rankings</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">+210%</span>
+                <span class="stat-metric-key">Appointments</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="apex-health">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Artisan Coffee -->
+        <div class="portfolio-card glass-card" data-category="email">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#241712" stroke="#F59E0B" stroke-width="1.5" />
+                <path d="M 40,40 L 100,75 L 160,40" stroke="#F59E0B" stroke-width="2" fill="none" />
+                <text x="100" y="30" fill="#FDE68A" font-size="10" text-anchor="middle" font-weight="700">KLAVIYO RETENTION</text>
+                <text x="100" y="95" fill="#FFFFFF" font-size="14" text-anchor="middle" font-weight="800">38.4% REV FROM EMAIL</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">Email Automation</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">Artisan Coffee Co.</span>
+            <h3 class="portfolio-title">Automated Retention &amp; Customer Lifetime Value Scaling</h3>
+            <p class="portfolio-desc">
+              Interactive coffee taste quiz paired with dynamic Klaviyo replenishment flows that elevated repeat order rates significantly.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">38.4%</span>
+                <span class="stat-metric-key">Email Revenue</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">44.2%</span>
+                <span class="stat-metric-key">Avg Open Rate</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="artisan-coffee">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Elevate Co-Working -->
+        <div class="portfolio-card glass-card" data-category="paid-ads">
+          <div class="portfolio-visual">
+            <div class="portfolio-mock-graphic">
+              <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="10" width="180" height="100" rx="10" fill="#0C1E26" stroke="#10B981" stroke-width="1.5" />
+                <circle cx="100" cy="55" r="32" fill="none" stroke="#10B981" stroke-width="4" stroke-dasharray="160 40" />
+                <text x="100" y="60" fill="#FFFFFF" font-size="13" text-anchor="middle" font-weight="800">95%</text>
+                <text x="100" y="100" fill="#A7F3D0" font-size="9" text-anchor="middle">FACILITY OCCUPANCY</text>
+              </svg>
+            </div>
+            <span class="portfolio-badge-pill">Omnichannel Launch</span>
+          </div>
+          <div class="portfolio-body">
+            <span class="portfolio-client">Elevate Workspaces</span>
+            <h3 class="portfolio-title">60-Day Full Capacity Launch for Metro Coworking Campus</h3>
+            <p class="portfolio-desc">
+              Integrated Google Search Ads, local influencer tours, and high-converting virtual walkthrough videos yielding 95% occupancy.
+            </p>
+            <div class="portfolio-metrics-row">
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">5.1x</span>
+                <span class="stat-metric-key">Launch ROI</span>
+              </div>
+              <div class="stat-metric-item">
+                <span class="stat-metric-val">95%</span>
+                <span class="stat-metric-key">Occupancy (60d)</span>
+              </div>
+            </div>
+            <div class="portfolio-actions">
+              <button class="btn-case-study" data-open-case="elevate-cowork">
+                <span>View Full Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPERIENCE & CERTIFICATIONS SECTION
+       ========================================================================== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>CAREER TRACK RECORD</span>
+        </div>
+        <h2 class="section-title">
+          Experience &amp; Industry <span class="gradient-text">Certifications</span>
+        </h2>
+        <p class="section-subtitle">
+          A progression of hands-on leadership roles, delivering measurable growth for fast-growing companies and multinational brands.
+        </p>
+      </div>
+
+      <div class="experience-layout">
+        <!-- Timeline Column -->
+        <div class="timeline">
+          <!-- Role 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-period">2023 — Present</span>
+              <h3 class="timeline-role">Senior Digital Marketing Strategist</h3>
+              <div class="timeline-company">GrowthSphere Media &amp; Brand Agency</div>
+              <p class="timeline-desc">
+                Leading multi-channel digital campaigns for mid-market e-commerce and SaaS brands. Managing monthly media budgets exceeding $150K across Meta, Google Ads, and TikTok. Directing creative content teams to optimize conversion rates and client acquisition cost.
+              </p>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-period">2021 — 2023</span>
+              <h3 class="timeline-role">Performance Marketing &amp; Social Lead</h3>
+              <div class="timeline-company">Horizon Digital Studio</div>
+              <p class="timeline-desc">
+                Spearheaded performance advertising, paid social strategies, and influencer collaborations. Generated over 14M organic impressions and maintained an average ROAS of 3.8x across client portfolios.
+              </p>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-period">2019 — 2021</span>
+              <h3 class="timeline-role">Digital Marketing &amp; Content Specialist</h3>
+              <div class="timeline-company">Bloom Media Group</div>
+              <p class="timeline-desc">
+                Engineered inbound content funnels, managed corporate social media accounts, and executed search engine optimization audits that improved organic rankings for 25+ business clients.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications Column -->
+        <div class="certifications-panel">
+          <div class="cert-card glass-card">
+            <div class="cert-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">Google Ads Certified Professional</h4>
+              <span class="cert-issuer">Google Skillshop</span>
+              <span class="cert-date">Search &amp; Display Specialization</span>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-badge-icon" style="background: linear-gradient(135deg, var(--royal-blue) 0%, #1D4ED8 100%);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">Meta Certified Media Specialist</h4>
+              <span class="cert-issuer">Meta Blueprint</span>
+              <span class="cert-date">Performance Campaign Planning</span>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-badge-icon" style="background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">HubSpot Inbound Marketing</h4>
+              <span class="cert-issuer">HubSpot Academy</span>
+              <span class="cert-date">Content Strategy &amp; Automation</span>
+            </div>
+          </div>
+
+          <div class="cert-card glass-card">
+            <div class="cert-badge-icon" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-name">Google Analytics 4 (GA4) Advanced</h4>
+              <span class="cert-issuer">Google Analytics Academy</span>
+              <span class="cert-date">Attribution Modeling &amp; Event Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CLIENT TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>CLIENT REVIEWS</span>
+        </div>
+        <h2 class="section-title">
+          What Brand Leaders Say <span class="gradient-text">About My Work</span>
+        </h2>
+        <p class="section-subtitle">
+          Trusted by founders, marketing directors, and creative entrepreneurs worldwide.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card glass-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="test-quote">
+            "Working with Habiba was a game-changer for our e-commerce business. Her ability to craft compelling ad creative while ruthlessly optimizing targeting parameters helped us break our quarterly revenue record."
+          </p>
+          <div class="test-author">
+            <div class="test-avatar">SJ</div>
+            <div class="test-author-info">
+              <span class="test-author-name">Sarah Jenkins</span>
+              <span class="test-author-role">Founder, Aura Glow Cosmetics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card glass-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="test-quote">
+            "Habiba doesn't just manage marketing campaigns — she truly understands business growth and unit economics. Her weekly reports were the clearest and most actionable our leadership team has ever seen."
+          </p>
+          <div class="test-author">
+            <div class="test-avatar" style="background: linear-gradient(135deg, var(--royal-blue) 0%, var(--accent-cyan) 100%);">MV</div>
+            <div class="test-author-info">
+              <span class="test-author-name">Marcus Vance</span>
+              <span class="test-author-role">VP of Marketing, Finova Tech</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card glass-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="test-quote">
+            "Finding a digital marketer who balances high creative flair with deep technical understanding of algorithms and SEO is rare. Habiba made our brand launch an extraordinary success!"
+          </p>
+          <div class="test-author">
+            <div class="test-avatar" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">ER</div>
+            <div class="test-author-info">
+              <span class="test-author-name">Elena Rostova</span>
+              <span class="test-author-role">Managing Director, Elevate Spaces</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION (ACCORDION)
+       ========================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>FREQUENT QUESTIONS</span>
+        </div>
+        <h2 class="section-title">
+          Frequently Asked <span class="gradient-text">Questions</span>
+        </h2>
+        <p class="section-subtitle">
+          Everything you need to know about working together, communication, and performance expectations.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question-btn" aria-expanded="true">
+            <span>How quickly can my business expect to see marketing results?</span>
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            For Paid Advertising (Meta &amp; Google Ads), we typically start gathering conclusive test data and generating conversions within the first 7 to 14 days of campaign launch. For organic SEO and content marketing strategies, noticeable compounding organic traffic increases generally mature over 60 to 90 days as domain authority builds.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What does your typical marketing onboarding process look like?</span>
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            We begin with a 45-minute discovery consultation, followed by a comprehensive audit of your existing accounts, website conversion funnels, and competitors. From there, I develop a tailored 90-day growth roadmap with clear milestones, KPI targets, creative briefs, and weekly reporting syncs.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Do you work with early-stage startups as well as established brands?</span>
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            Yes! I work with both high-potential seed startups seeking product-market fit and brand launch velocity, as well as established e-commerce and B2B enterprises looking to scale acquisition efficiency, optimize their CAC:LTV ratio, and expand into new digital channels.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How do you handle campaign tracking, reporting, and transparency?</span>
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            Full transparency is a core pillar of my practice. Clients receive access to a dedicated real-time Looker Studio dashboard that connects directly to Google Analytics 4, Meta Ads, and search consoles. You can see your exact spend, ROAS, cost per lead, and revenue whenever you wish, supplemented with weekly Loom video summaries.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="section-eyebrow-icon"></span>
+          <span>GET IN TOUCH</span>
+        </div>
+        <h2 class="section-title">
+          Let's Elevate Your <span class="gradient-text">Brand Together</span>
+        </h2>
+        <p class="section-subtitle">
+          Have an upcoming campaign, product launch, or looking to scale your marketing performance? Send a message and let's craft a winning strategy.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information Column -->
+        <div class="contact-info-col">
+          <div class="contact-status-card">
+            <span class="status-dot-pulse"></span>
+            <span class="status-text">Available for New Projects &amp; Advisory Consultations</span>
+          </div>
+
+          <div class="contact-cards-list">
+            <!-- Email Card -->
+            <div class="contact-detail-card glass-card">
+              <div class="contact-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-detail-meta">
+                <span class="contact-detail-title">Direct Email</span>
+                <a href="mailto:habiba.haroon.marketing@example.com" class="contact-detail-val">habiba.haroon.marketing@example.com</a>
+              </div>
+            </div>
+
+            <!-- WhatsApp / Phone -->
+            <div class="contact-detail-card glass-card">
+              <div class="contact-detail-icon" style="background: rgba(37,99,235,0.12); color: var(--royal-blue-light); border-color: rgba(37,99,235,0.25);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-detail-meta">
+                <span class="contact-detail-title">Phone &amp; WhatsApp</span>
+                <span class="contact-detail-val">+1 (555) 382-9012 (Client Desk)</span>
+              </div>
+            </div>
+
+            <!-- Location & Remote Work -->
+            <div class="contact-detail-card glass-card">
+              <div class="contact-detail-icon" style="background: rgba(16,185,129,0.12); color: var(--accent-emerald); border-color: rgba(16,185,129,0.25);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-detail-meta">
+                <span class="contact-detail-title">Location &amp; Availability</span>
+                <span class="contact-detail-val">Global Client Engagements / Hybrid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Interactive Form -->
+        <div class="contact-form-card glass-card">
+          <form id="contactForm" novalidate>
+            <div class="form-group-grid">
+              <!-- Name -->
+              <div class="form-field">
+                <label for="formName">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="formName" class="form-input" placeholder="e.g. Sarah Connor" required>
+                <span class="field-error-msg"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-field">
+                <label for="formEmail">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="formEmail" class="form-input" placeholder="e.g. sarah@company.com" required>
+                <span class="field-error-msg"></span>
+              </div>
+            </div>
+
+            <div class="form-group-grid">
+              <!-- Service Needed -->
+              <div class="form-field">
+                <label for="formService">Service Needed</label>
+                <select id="formService" class="form-select">
+                  <option value="paid-ads">Paid Ad Campaigns (Meta / Google)</option>
+                  <option value="social-media">Social Media Management &amp; Growth</option>
+                  <option value="seo">Search Engine Optimization (SEO)</option>
+                  <option value="content-strategy">Content Strategy &amp; Copywriting</option>
+                  <option value="email-retention">Email Marketing &amp; Klaviyo Flows</option>
+                  <option value="full-funnel">Full-Funnel Growth Partnership</option>
+                </select>
+              </div>
+
+              <!-- Estimated Monthly Budget -->
+              <div class="form-field">
+                <label for="formBudget">Monthly Ad / Project Budget</label>
+                <select id="formBudget" class="form-select">
+                  <option value="1k-3k">$1,000 — $3,000</option>
+                  <option value="3k-10k" selected>$3,000 — $10,000</option>
+                  <option value="10k-25k">$10,000 — $25,000</option>
+                  <option value="25k+">$25,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-field">
+              <label for="formMessage">Project Details &amp; Goals <span class="required-star">*</span></label>
+              <textarea id="formMessage" class="form-textarea" placeholder="Tell me about your brand, current challenges, and target KPIs..." required></textarea>
+              <span class="field-error-msg"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit-form">
+              <span>Send Project Inquiry</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="#home" class="brand-logo" aria-label="Habiba Haroon Home">
+            <div class="logo-monogram">HH</div>
+            <div class="logo-text-wrap">
+              <span class="logo-title">HABIBA HAROON</span>
+              <span class="logo-subtitle">DIGITAL MARKETER</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio">
+            Helping ambitious businesses build powerful online identities, launch high-ROAS marketing campaigns, and turn creative ideas into digital results.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills &amp; Toolkit</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Featured Case Studies</a></li>
+            <li><a href="#contact">Get In Touch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services -->
+        <div>
+          <h4 class="footer-col-title">Core Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services">Social Media Growth</a></li>
+            <li><a href="#services">Meta &amp; Google Ads</a></li>
+            <li><a href="#services">Search Engine Optimization</a></li>
+            <li><a href="#services">Content Marketing</a></li>
+            <li><a href="#services">Email Funnel Automation</a></li>
+            <li><a href="#services">GA4 Analytics Audits</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Social Channels -->
+        <div>
+          <h4 class="footer-col-title">Social Profiles</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">X (Formerly Twitter)</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram (@habiba.marketing)</a></li>
+            <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <span>HABIBA HAROON</span>. All rights reserved. Designed with modern digital marketing excellence.
+        </p>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top of Page" title="Back to top">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS: CASE STUDY DETAIL MODAL & CV PREVIEW MODAL
+       ========================================================================== -->
+  <!-- Case Study Quickview Modal -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-label="Case Study Details">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modalBodyContent">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CV Preview / Download Modal -->
+  <div class="modal-overlay" id="cvModal" role="dialog" aria-modal="true" aria-label="Habiba Haroon Curriculum Vitae">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="cvCloseBtn" aria-label="Close CV preview">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="cv-preview-card">
+        <div class="cv-header-block">
+          <h2 class="cv-name">HABIBA HAROON</h2>
+          <div class="cv-tagline">Creative Digital Marketer &amp; Growth Strategist</div>
+          <div class="cv-contact-pills">
+            <span>Email: habiba.haroon.marketing@example.com</span>
+            <span>•</span>
+            <span>Global Remote / Hybrid</span>
+            <span>•</span>
+            <span>Portfolio: HH Brand</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="cv-section-title">Professional Summary</h3>
+          <p class="cv-summary-text">
+            Passionate and creative Digital Marketer with 5+ years of demonstrable track record in full-funnel digital strategy, paid advertising (Meta &amp; Google Ads), organic search engine optimization, and conversion-focused content marketing. Proven history of scaling return on ad spend to 4.5x, building high-converting retention funnels, and amplifying online brand visibility.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="cv-section-title">Core Competencies</h3>
+          <p class="cv-summary-text">
+            • Paid Acquisition: Meta Ads Manager, Google Search/Display, TikTok Ads, Retargeting Architecture<br>
+            • SEO &amp; Inbound: Keyword Clustering, Technical Audits, Schema Markup, Core Web Vitals<br>
+            • Retention Marketing: Klaviyo Funnels, Mailchimp, Lifecycle Journeys, Abandoned Cart Recovery<br>
+            • Analytics &amp; CRO: Google Analytics 4, Looker Studio, Tag Manager, Split Testing, Attribution
+          </p>
+        </div>
+
+        <div>
+          <h3 class="cv-section-title">Career Milestones</h3>
+          <p class="cv-summary-text">
+            • <strong>Senior Digital Marketing Strategist</strong> — GrowthSphere Agency (2023–Present)<br>
+            • <strong>Performance Marketing Lead</strong> — Horizon Media Lab (2021–2023)<br>
+            • <strong>Digital Marketing Specialist</strong> — Bloom Media Group (2019–2021)
+          </p>
+        </div>
+
+        <div class="cv-actions-row">
+          <button class="btn btn-secondary" onclick="document.getElementById('cvModal').classList.remove('open'); document.body.style.overflow='';" style="padding: 0.65rem 1.4rem;">Close</button>
+          <button class="btn btn-primary" id="printCvBtn" style="padding: 0.65rem 1.4rem;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / Save as PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Custom Scripts -->
+  <script>
+/**
+ * ==========================================================================
+ * HABIBA HAROON — PREMIUM DIGITAL MARKETING PORTFOLIO
+ * Main JavaScript Controller
+ * Pure Vanilla JS (ES6+) — Zero Frameworks or External Libraries
+ * ==========================================================================
+ */
+
+(function () {
+  'use strict';
+
+  // --------------------------------------------------------------------------
+  // 1. Theme Management (Dark / Light Mode)
+  // --------------------------------------------------------------------------
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const htmlElement = document.documentElement;
+
+  // Retrieve saved theme or default to dark
+  const savedTheme = localStorage.getItem('hh_theme') || 'dark';
+  applyTheme(savedTheme);
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      htmlElement.setAttribute('data-theme', 'light');
+    } else {
+      htmlElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('hh_theme', theme);
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(newTheme);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 2. Sticky Navbar & Active Navigation Scrollspy
+  // --------------------------------------------------------------------------
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  window.addEventListener('scroll', () => {
+    // Add scrolled glass state to navbar
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // Scrollspy to set active nav link
+    const scrollPosition = window.scrollY + 120;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+
+  // --------------------------------------------------------------------------
+  // 3. Mobile Navigation Menu Toggle
+  // --------------------------------------------------------------------------
+  const mobileNavToggle = document.getElementById('mobileNavToggle');
+  const navLinksContainer = document.getElementById('navLinks');
+
+  if (mobileNavToggle && navLinksContainer) {
+    mobileNavToggle.addEventListener('click', () => {
+      const isOpen = navLinksContainer.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+
+    // Close when clicking nav links
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (
+        navLinksContainer.classList.contains('open') &&
+        !navLinksContainer.contains(e.target) &&
+        !mobileNavToggle.contains(e.target)
+      ) {
+        closeMobileNav();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinksContainer.classList.contains('open')) {
+        closeMobileNav();
+      }
+    });
+  }
+
+  function openMobileNav() {
+    mobileNavToggle.classList.add('open');
+    navLinksContainer.classList.add('open');
+    mobileNavToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    mobileNavToggle.classList.remove('open');
+    navLinksContainer.classList.remove('open');
+    mobileNavToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // --------------------------------------------------------------------------
+  // 4. Hero Animated Typewriter Text
+  // --------------------------------------------------------------------------
+  const typewriterTarget = document.getElementById('dynamicTypewriter');
+  const typingPhrases = [
+    'Helping Brands Grow Digitally',
+    'Building Powerful Online Presence',
+    'Turning Ideas Into Digital Results'
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeSpeed = 80;
+  const deleteSpeed = 40;
+  const pauseEnd = 2000;
+  const pauseStart = 400;
+
+  function typeEffect() {
+    if (!typewriterTarget) return;
+
+    const currentPhrase = typingPhrases[phraseIndex];
+
+    if (isDeleting) {
+      typewriterTarget.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typewriterTarget.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let currentSpeed = isDeleting ? deleteSpeed : typeSpeed;
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      currentSpeed = pauseEnd;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+      currentSpeed = pauseStart;
+    }
+
+    setTimeout(typeEffect, currentSpeed);
+  }
+
+  // Start typing animation once DOM is ready
+  setTimeout(typeEffect, 600);
+
+  // --------------------------------------------------------------------------
+  // 5. Animated Number Counters (Intersection Observer)
+  // --------------------------------------------------------------------------
+  const counterElements = document.querySelectorAll('.metric-number[data-target]');
+  let hasAnimatedCounters = false;
+
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimatedCounters) {
+          hasAnimatedCounters = true;
+          counterElements.forEach((el) => {
+            const targetVal = parseFloat(el.getAttribute('data-target'));
+            const isDecimal = targetVal % 1 !== 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+              const elapsedTime = currentTime - startTime;
+              const progress = Math.min(elapsedTime / duration, 1);
+              // Ease-out expo curve
+              const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+              const currentNumber = easeProgress * targetVal;
+
+              el.textContent = isDecimal
+                ? currentNumber.toFixed(1)
+                : Math.floor(currentNumber).toString();
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                el.textContent = isDecimal ? targetVal.toFixed(1) : targetVal.toString();
+              }
+            }
+
+            requestAnimationFrame(updateCounter);
+          });
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  const metricsStrip = document.querySelector('.metrics-strip');
+  if (metricsStrip) {
+    counterObserver.observe(metricsStrip);
+  }
+
+  // --------------------------------------------------------------------------
+  // 6. Portfolio Filtering
+  // --------------------------------------------------------------------------
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // Toggle active button
+      filterButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      portfolioCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+
+        if (filterValue === 'all' || category === filterValue) {
+          card.classList.remove('hidden');
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // --------------------------------------------------------------------------
+  // 7. Case Study Modal Data & Handlers
+  // --------------------------------------------------------------------------
+  const caseStudiesData = {
+    'aura-glow': {
+      title: 'Aura Glow Skincare — 4.2x ROAS Scaling Campaign',
+      category: 'Paid Advertising & Social Media',
+      client: 'Aura Glow Cosmetics',
+      duration: '3 Months (Q3 2024)',
+      summary: 'A direct-to-consumer skincare brand needed to scale revenue without diminishing return on ad spend. By deploying high-converting UGC ad creative, structured Meta Advantage+ campaigns, and retargeting funnels, we scaled monthly revenue by 280%.',
+      challenge: 'High customer acquisition costs (CAC) on Meta Ads with fatigued creative assets and poor post-click conversion rates.',
+      strategy: [
+        'Overhauled creative pipeline with authentic creator-style user-generated video hooks.',
+        'Segmented campaigns into Broad Prospecting, Mid-Funnel Consideration, and Dynamic Product Retargeting.',
+        'Implemented custom pre-purchase landing pages with social proof and tiered bundle discounts.'
+      ],
+      results: [
+        { label: 'Return on Ad Spend (ROAS)', value: '4.2x (up from 1.6x)' },
+        { label: 'Quarterly Sales Growth', value: '+280%' },
+        { label: 'Customer Acquisition Cost', value: '-38% Decrease' },
+        { label: 'Net Monthly Ad Spend Managed', value: '$85,000+' }
+      ],
+      quote: '"Habiba completely restructured our ad strategy and brought clarity to our funnel. Our profit margins and sales hit all-time highs under her guidance!" — Sarah Jenkins, Founder'
+    },
+    'finova-tech': {
+      title: 'Finova Tech — B2B SaaS Inbound & LinkedIn Lead Gen',
+      category: 'B2B Marketing & Search Engine Optimization',
+      client: 'Finova Software Group',
+      duration: '6 Months (2024)',
+      summary: 'Engineered an organic content and targeted LinkedIn lead-gen engine for an enterprise fintech platform, producing 340% increase in qualified sales opportunities while reducing CPL by 42%.',
+      challenge: 'Long enterprise sales cycle, zero organic ranking for core product keywords, and high reliance on expensive cold outbound outreach.',
+      strategy: [
+        'Executed in-depth keyword gap analysis targeting high-intent commercial software search queries.',
+        'Published 24 thought-leadership comparison whitepapers and conversion-oriented blog clusters.',
+        'Ran LinkedIn Thought Leader Ads boosting executive profiles to senior finance decision-makers.'
+      ],
+      results: [
+        { label: 'Qualified Pipeline Leads', value: '+340%' },
+        { label: 'Cost Per Qualified Lead', value: '-42% Reduction' },
+        { label: 'Organic Search Impressions', value: '+520%' },
+        { label: 'Enterprise Demos Booked', value: '185+' }
+      ],
+      quote: '"The quality of enterprise leads Habiba brought in has transformed our pipeline. Her blend of technical SEO and B2B messaging is rare." — Marcus Vance, VP Marketing'
+    },
+    'urban-thread': {
+      title: 'UrbanThread Fashion — Viral TikTok & Instagram Surge',
+      category: 'Social Media & Influencer Marketing',
+      client: 'UrbanThread Streetwear',
+      duration: '2 Months Launch Sprint',
+      summary: 'Orchestrated a viral launch campaign for a Gen-Z fashion apparel line utilizing micro-influencers, trending TikTok audio formats, and community engagement challenges, reaching 2.8M organic impressions.',
+      challenge: 'Launching a brand new collection in an ultra-competitive streetwear market with zero initial audience.',
+      strategy: [
+        'Partnered with 35 curated micro-influencers on TikTok and Instagram Reels for coordinated reveal teasers.',
+        'Created high-energy styling transformation videos tailored to TikTok algorithmic velocity.',
+        'Integrated Instagram Broadcast Channels for exclusive early access drop alerts.'
+      ],
+      results: [
+        { label: 'Organic Video Impressions', value: '2.8M+' },
+        { label: 'Engagement Rate', value: '8.4% (Industry avg 2%)' },
+        { label: 'New Instagram Followers', value: '+42,000' },
+        { label: 'Collection Sold Out Time', value: 'Under 72 Hours' }
+      ],
+      quote: '"Habiba has a golden touch for social media. She captured our brand voice perfectly and made our drop trend overnight." — Chloe Rivera, Brand Director'
+    },
+    'apex-health': {
+      title: 'Apex Health — Local & Technical SEO Overhaul',
+      category: 'Search Engine Optimization',
+      client: 'Apex Medical & Wellness Network',
+      duration: '5 Months Ongoing',
+      summary: 'Complete technical SEO audit, local Google Business Profile optimization, and medical service page architecture overhaul, achieving #1 Google rankings for 45+ competitive keywords.',
+      challenge: 'Multi-location wellness clinic suffering from duplicate content penalties, slow mobile page speed, and virtually no local search visibility.',
+      strategy: [
+        'Fixed schema markup, Core Web Vitals, and mobile responsiveness across 6 clinic locations.',
+        'Created hyper-local service landing pages with local patient reviews and doctor credentials.',
+        'Built authoritative local backlinks via health publications and regional business citations.'
+      ],
+      results: [
+        { label: 'Top 3 Google Rankings', value: '45+ Key Terms' },
+        { label: 'Organic Patient Bookings', value: '+210%' },
+        { label: 'Google Maps Profile Views', value: '+165%' },
+        { label: 'Mobile Page Speed Score', value: '98/100 (from 42)' }
+      ],
+      quote: '"Our appointment calendar has been consistently full thanks to the steady influx of organic patients Habiba unlocked for us." — Dr. Nathan Reed, Medical Director'
+    },
+    'artisan-coffee': {
+      title: 'Artisan Coffee Roasters — Retention & Klaviyo Email Funnels',
+      category: 'Email Marketing & CRM Automation',
+      client: 'Artisan Coffee Co.',
+      duration: '4 Months',
+      summary: 'Built automated customer lifecycle email sequences including Welcome series, Abandoned Cart recovery, Win-Back campaigns, and a Coffee Club VIP subscription funnel.',
+      challenge: 'High customer churn after first purchase and no automated retention sequences in place.',
+      strategy: [
+        'Created a 6-step interactive coffee preference quiz that segments subscribers based on taste preferences.',
+        'Engineered dynamic email templates with personalized blend recommendations and brewing guides.',
+        'Set up predictive replenishment emails triggered by average customer reorder frequencies.'
+      ],
+      results: [
+        { label: 'Total Revenue from Email', value: '38.4%' },
+        { label: 'Average Email Open Rate', value: '44.2%' },
+        { label: 'Abandoned Cart Recovery Rate', value: '18.6%' },
+        { label: 'Subscription Retention Rate', value: '+65%' }
+      ],
+      quote: '"Habiba made email our single most profitable revenue channel. Her automated flows work for us 24/7!" — Liam Miller, Co-Founder'
+    },
+    'elevate-cowork': {
+      title: 'Elevate Co-Working — Multi-Channel Launch Strategy',
+      category: 'Omnichannel Brand Launch',
+      client: 'Elevate Workspaces',
+      duration: '60-Day Sprint',
+      summary: 'Executed an integrated brand launch combining hyper-targeted Google Local Ads, Meta Lead Generation forms, and an engaging PR campaign, achieving 95% workspace occupancy in 60 days.',
+      challenge: 'Opening a premium 25,000 sq ft workspace in a downtown metro area with stiff corporate competition.',
+      strategy: [
+        'Deployed Google Search Ads targeting "private office rentals" and "coworking memberships".',
+        'Launched virtual 3D tour video ads on Meta targeting freelancers, startups, and remote teams.',
+        'Offered limited-capacity launch day passes to drive instant foot traffic and user UGC.'
+      ],
+      results: [
+        { label: 'Facility Occupancy Rate', value: '95% in 60 Days' },
+        { label: 'Return on Marketing Spend', value: '5.1x Total ROI' },
+        { label: 'Cost Per Tour Booking', value: '$18.20' },
+        { label: 'Annual Contract Value Locked', value: '$420,000+' }
+      ],
+      quote: '"Habiba delivered on every promise. Her strategic clarity, execution speed, and weekly reporting were world-class." — Elena Rostova, Managing Partner'
+    }
+  };
+
+  const caseStudyModal = document.getElementById('caseStudyModal');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalBodyContent = document.getElementById('modalBodyContent');
+
+  function openCaseStudyModal(studyId) {
+    const data = caseStudiesData[studyId];
+    if (!data || !caseStudyModal || !modalBodyContent) return;
+
+    let resultsHtml = '';
+    data.results.forEach((r) => {
+      resultsHtml += `
+        <div style="background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-emerald);">${r.value}</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">${r.label}</div>
+        </div>
+      `;
+    });
+
+    let strategyHtml = '';
+    data.strategy.forEach((s) => {
+      strategyHtml += `
+        <li style="display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+          <span style="color: var(--primary-purple); font-weight: bold; margin-top: 2px;">•</span>
+          <span>${s}</span>
+        </li>
+      `;
+    });
+
+    modalBodyContent.innerHTML = `
+      <div style="margin-bottom: 1.5rem;">
+        <span style="display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary-purple-light); margin-bottom: 0.5rem;">${data.category}</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-main);">${data.title}</h2>
+        <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span><strong>Client:</strong> ${data.client}</span>
+          <span><strong>Duration:</strong> ${data.duration}</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--soft-violet); text-transform: uppercase; margin-bottom: 0.4rem;">Executive Overview</h4>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary);">${data.summary}</p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem; background: rgba(239, 68, 68, 0.08); border-left: 3px solid #EF4444; padding: 1rem 1.25rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: #F87171; margin-bottom: 0.25rem;">The Challenge</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${data.challenge}</p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--soft-violet); text-transform: uppercase; margin-bottom: 0.5rem;">Strategic Execution</h4>
+        <ul style="list-style: none; padding: 0;">${strategyHtml}</ul>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1rem; font-weight: 700; color: var(--soft-violet); text-transform: uppercase; margin-bottom: 0.75rem;">Measurable Outcomes &amp; ROI</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">${resultsHtml}</div>
+      </div>
+
+      <div style="background: var(--badge-bg); border: 1px solid var(--badge-border); padding: 1.25rem; border-radius: var(--radius-md); font-style: italic; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+        ${data.quote}
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <a href="#contact" onclick="document.getElementById('caseStudyModal').classList.remove('open'); document.body.style.overflow='';" class="btn btn-primary" style="padding: 0.65rem 1.5rem; font-size: 0.9rem;">Start Your Campaign</a>
+      </div>
+    `;
+
+    caseStudyModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCaseStudyModal() {
+    if (caseStudyModal) {
+      caseStudyModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Attach modal trigger to buttons
+  document.querySelectorAll('[data-open-case]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const studyId = btn.getAttribute('data-open-case');
+      openCaseStudyModal(studyId);
+    });
+  });
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeCaseStudyModal);
+  }
+
+  if (caseStudyModal) {
+    caseStudyModal.addEventListener('click', (e) => {
+      if (e.target === caseStudyModal) {
+        closeCaseStudyModal();
+      }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 8. CV Preview & Download Modal Handlers
+  // --------------------------------------------------------------------------
+  const cvModal = document.getElementById('cvModal');
+  const openCvBtns = document.querySelectorAll('[data-trigger-cv]');
+  const closeCvBtn = document.getElementById('cvCloseBtn');
+  const printCvBtn = document.getElementById('printCvBtn');
+
+  openCvBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (cvModal) {
+        cvModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeCvModal() {
+    if (cvModal) {
+      cvModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (closeCvBtn) {
+    closeCvBtn.addEventListener('click', closeCvModal);
+  }
+
+  if (cvModal) {
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) {
+        closeCvModal();
+      }
+    });
+  }
+
+  if (printCvBtn) {
+    printCvBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  // Global escape key for any open modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeCaseStudyModal();
+      closeCvModal();
+    }
+  });
+
+  // --------------------------------------------------------------------------
+  // 9. FAQ Accordion Interaction
+  // --------------------------------------------------------------------------
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all items
+        faqItems.forEach((other) => {
+          other.classList.remove('active');
+          const otherBtn = other.querySelector('.faq-question-btn');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  // --------------------------------------------------------------------------
+  // 10. Contact Form Interactive Validation & Toast Feedback
+  // --------------------------------------------------------------------------
+  const contactForm = document.getElementById('contactForm');
+  const toastContainer = document.getElementById('toastContainer');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('formName');
+      const emailInput = document.getElementById('formEmail');
+      const serviceInput = document.getElementById('formService');
+      const messageInput = document.getElementById('formMessage');
+      const submitBtn = contactForm.querySelector('.btn-submit-form');
+
+      let isValid = true;
+
+      // Validate Name
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        setFieldError(nameInput, 'Please provide your full name.');
+        isValid = false;
+      } else {
+        clearFieldError(nameInput);
+      }
+
+      // Validate Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+        setFieldError(emailInput, 'Please enter a valid email address.');
+        isValid = false;
+      } else {
+        clearFieldError(emailInput);
+      }
+
+      // Validate Message
+      if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
+        setFieldError(messageInput, 'Please tell us a little more about your project (min 10 characters).');
+        isValid = false;
+      } else {
+        clearFieldError(messageInput);
+      }
+
+      if (!isValid) return;
+
+      // Simulate sending with button state
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg style="animation: spin 1s linear infinite; width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 8px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+        </svg> Sending Proposal Request...
+      `;
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        contactForm.reset();
+
+        showToast(
+          '✨ Message sent successfully! Habiba will review your project and reply within 24 hours.'
+        );
+      }, 1200);
+    });
+  }
+
+  function setFieldError(inputEl, msg) {
+    inputEl.classList.add('input-error');
+    const parentField = inputEl.closest('.form-field');
+    if (parentField) {
+      let errorEl = parentField.querySelector('.field-error-msg');
+      if (errorEl) {
+        errorEl.textContent = msg;
+        errorEl.classList.add('visible');
+      }
+    }
+  }
+
+  function clearFieldError(inputEl) {
+    inputEl.classList.remove('input-error');
+    const parentField = inputEl.closest('.form-field');
+    if (parentField) {
+      let errorEl = parentField.querySelector('.field-error-msg');
+      if (errorEl) {
+        errorEl.classList.remove('visible');
+      }
+    }
+  }
+
+  function showToast(message) {
+    if (!toastContainer) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `
+      <div class="toast-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="toast-text">${message}</div>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    // Trigger animation in
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 50);
+
+    // Auto dismiss
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        toast.remove();
+      }, 400);
+    }, 4500);
+  }
+
+  // --------------------------------------------------------------------------
+  // 11. Back to Top Button
+  // --------------------------------------------------------------------------
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.style.opacity = '1';
+        backToTopBtn.style.visibility = 'visible';
+        backToTopBtn.style.transform = 'translateY(0)';
+      } else {
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.visibility = 'hidden';
+        backToTopBtn.style.transform = 'translateY(15px)';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Spin keyframe helper for loading spinner
+  const styleEl = document.createElement('style');
+  styleEl.textContent = `
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(styleEl);
+})();
+
+</script>
+</body>
+</html>
